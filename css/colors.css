@@ -1,0 +1,65 @@
+:root {
+    --gray: rgb(31, 31, 31);
+    --gray-lighter: rgb(41, 41, 41);
+    --pink: rgb(170, 0, 113);
+    --white: rgb(221, 221, 221);
+    --pink-lighter: rgb(218, 1, 145);
+
+    --margin-xxs: 0.25rem;
+    --margin-xs: 0.50rem;
+    --margin-s: 0.75rem;
+    --margin-m: 1rem;
+    --margin-l: 1.25rem;
+    --margin-xl: 1.50rem;
+    --margin-xxl: 2.0rem;
+
+    --font-xxs: 0.50rem;
+    --font-xs: 0.75rem;
+    --font-s: 1rem;
+    --font-m: 1.25rem;
+    --font-l: 1.50rem;
+    --font-xl: 1.75rem;
+    --font-xxl: 2.00rem;
+}
+
+.animated-link{
+    color: var(--pink);
+    will-change: transform;
+    transition: transform 0.2s ease;
+}
+.animated-link:hover{
+    color: var(--pink-lighter);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.animated-btn{
+    padding: 1%;
+    color: var(--pink);
+    border: 1px solid var(--pink);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: transform 0.2s ease;
+    will-change: transform;
+}
+.animated-btn:hover{
+    color: var(--pink-lighter);
+    transform: scale(1.04);
+    cursor: pointer;
+    border: 1px solid var(--pink-lighter);
+}
+.animated-btn-pink{
+    padding: 1%;
+    color: var(--gray);
+    border: 1px solid var(--pink);
+    border-radius: 10px;
+    background-color: var(--pink);
+    transition: transform 0.2s ease;
+}
+.animated-btn-pink:hover{
+    color: var(--gray);
+    background-color: var(--pink-lighter);
+    transform: scale(1.04);
+    cursor: pointer;
+    border: 1px solid var(--pink-lighter);
+}

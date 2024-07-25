@@ -1,0 +1,34 @@
+.product-details{
+    margin-top: 10vh;
+    width: 100%;
+    padding: 2% 10%;
+    background-color: antiquewhite;
+    display: flex;
+
+    .product-details-img-container{
+        width: 50%;
+
+        .product-details-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .product-details-info{
+        width: 50%;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+
+        h2{
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        p{
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+    }
+}

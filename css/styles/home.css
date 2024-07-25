@@ -1,0 +1,143 @@
+.home-banner {
+  width: 100%;
+  height: 90vh;
+  margin-top: 10vh;
+  position: relative;
+
+  .home-banner__img{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    object-fit: cover;
+    object-position: top;
+    z-index: -5;
+  }
+
+  .home-banner__content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(22, 0, 11, 0.8);
+
+    h2{
+      font-size: var(--font-xxl);
+      color: var(--white);
+      margin-bottom: var(--margin-xxs);
+    }
+    h3{
+      font-size: var(--font-l);
+      color: var(--white);
+      font-weight: 100;
+      margin-bottom: var(--margin-xxl);
+    }
+    a {
+      margin-top: var(--margin-xxl);
+      font-size: var(--font-m);
+    }
+  }
+}
+
+.suscription{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+
+  .suscription-banner{
+    width: 50%;
+    position: relative;
+
+    .suscription-banner__img{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -5;
+    }
+    .suscription-banner__content{
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10%;
+      text-align: center;
+      background-color: rgba(22, 0, 11, 0.747);
+
+      h3{
+        color: var(--white);
+        font-size: var(--font-l);
+        font-weight: 400;
+      }
+    }
+  }
+
+  .suscription-form-container{
+    width: 50%;
+    height: 100%;
+    background-color: var(--gray-lighter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3{
+      text-align: center;
+      font-size: var(--font-l);
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .suscription-form{
+      width: 80%;
+      padding: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2{
+        text-align: center;
+        color: var(--white);
+        font-weight: 500;
+        margin-bottom: var(--margin-xxl);
+      }
+
+      .form-group{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: var(--margin-l);
+        
+        label{
+          width: 100%;
+          color: var(--pink);
+          font-size: var(--font-s);
+          margin-bottom: var(--margin-xs);
+        }
+
+        input{
+          width: 100%;
+          padding: 2% 4%;
+          background-color: var(--white);
+          color: var(--gray);
+          font-size: var(--font-s);
+          border: none;
+          border-radius: 10px;
+        }
+
+        input:focus {
+          outline: none;
+        }
+      }
+      
+      button{
+        margin-top: var(--margin-xxl);
+        width: 100%;
+        font-size: var(--font-m);
+      }
+    }
+  }
+
+}

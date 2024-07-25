@@ -1,0 +1,44 @@
+.header {
+  width: 100%;
+  height: 10vh;
+  padding: 0 5%;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  background-color: var(--gray);
+
+  .header__left {
+    width: 25%;
+    .logo {
+      font-size: var(--font-l);
+      color: var(--white);
+    }
+  }
+
+  .header__middle {
+    width: 50%;
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      a {
+        font-size: var(--font-s);
+        font-weight: 500;
+      }
+    }
+  }
+
+  .header__right {
+    width: 25%;
+    .shopping-cart-open-btn {
+      height: auto;
+      width: auto;
+      float: right;
+      i {
+        font-size: var(--font-l);
+        color: var(--white);
+      }
+    }
+  }
+}
