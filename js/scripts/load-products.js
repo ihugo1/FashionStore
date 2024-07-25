@@ -1,10 +1,9 @@
-import { products } from "../data-base/products.js";
-
 let $productsContainer = document.getElementById("products-container");
 
-export function loadProducts() {
+export function loadProducts(productsToload) {
+  $productsContainer.innerHTML = "";
   let temp = "";
-  products.forEach((product) => {
+  productsToload.forEach((product) => {
     temp += `
       <div class="product-card">
         <a href="product-details.html?id=${product.id}" class="product-card-img-container">

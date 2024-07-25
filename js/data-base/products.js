@@ -12,7 +12,7 @@ export const products = [
     },
     {
         id: 2,
-        name: "Black Navy Collar Ribbon Buttoned Blouse",
+        name: "Red Florar Blouse",
         category: "blouse",
         price: 16.99,
         available: true,
