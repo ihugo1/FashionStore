@@ -1,4 +1,4 @@
-import { products } from "../data-base/products.js";
+import { productsDatabase } from "../data-base/products-database.js";
 import { loadProducts } from "./load-products.js";
 
 const $productsContainer = document.getElementById("products-container");
@@ -9,9 +9,9 @@ export function filterProducts() {
   const selectedCategory = $dropdownMenu.value;
   let filteredProducts = [];
   if (selectedCategory === "all") {
-    filteredProducts = products;
+    filteredProducts = productsDatabase;
   } else {
-    filteredProducts = products.filter((product) => { return product.category === selectedCategory });
+    filteredProducts = productsDatabase.filter((product) => { return product.category === selectedCategory });
   }
   loadProducts(filteredProducts);
 }

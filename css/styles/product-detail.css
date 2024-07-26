@@ -1,34 +1,97 @@
 .product-details{
     margin-top: 10vh;
-    width: 100%;
-    padding: 2% 10%;
-    background-color: antiquewhite;
     display: flex;
-
-    .product-details-img-container{
-        width: 50%;
-
+    width: 100%;
+    height: 90vh;
+    .product-details-left{
+        width:  50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         .product-details-img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
+            width: 80%;
+            height: auto;
         }
     }
-    .product-details-info{
+    .product-details-right{
         width: 50%;
         padding: 5%;
         display: flex;
         flex-direction: column;
-
-        h2{
-            font-size: 2rem;
-            margin-bottom: 40px;
+        justify-content: flex-start;
+        align-items: center;
+        .product-details-info{
+            width: 90%;
+            height: 50%;
+            margin-bottom: var(--margin-xxl);
+            .product-details-name{
+                font-size: var(--font-xl);
+                margin-bottom: var(--margin-xs);
+            }
+            .product-details-price{
+                font-size: var(--font-m);
+                margin-bottom: var(--margin-xs);
+            }
+            .product-details-category{
+                font-size: var(--font-m);
+                margin-bottom: var(--margin-xl);
+                font-weight: lighter;
+                text-transform: capitalize;
+            }
+            .product-details-description{
+                font-size: var(--font-s);
+                font-weight: normal;
+                text-align: justify;
+                margin-bottom: var(--font-xxl);
+            }
         }
-
-        p{
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+        .product-buy-section{
+            width: 90%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: var(--font-m);
+            .sizes-inputs{
+                display: flex;
+                justify-content: center;
+                margin-bottom: var(--margin-xl);
+                .size-input{
+                    height: auto;
+                    width: 60px;
+                    label{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: var(--font-xxl);
+                        font-weight: bold;
+                        background-color: var(--white);
+                        transition: background-color 0.5s ease;
+                        z-index: 1;
+                        cursor: pointer;
+                    }
+                    input{
+                        position: absolute;
+                        border-radius: 0;
+                        opacity: 0;
+                        z-index: 2;
+                    }
+                    input:hover{
+                        cursor: pointer;
+                    }
+                    input:checked+label{
+                        background-color: var(--pink-lighter);
+                        color: var(--white);
+                    }
+                }
+            }
+            .buy-btn{
+                margin: auto;
+                width: 50%;
+                font-size: var(--font-m);
+            }
         }
     }
 }

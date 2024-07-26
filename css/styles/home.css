@@ -27,12 +27,14 @@
       font-size: var(--font-xxl);
       color: var(--white);
       margin-bottom: var(--margin-xxs);
+      text-align: center;
     }
     h3{
       font-size: var(--font-l);
       color: var(--white);
       font-weight: 100;
       margin-bottom: var(--margin-xxl);
+      text-align: center;
     }
     a {
       margin-top: var(--margin-xxl);
@@ -140,4 +142,17 @@
     }
   }
 
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .suscription{
+    .suscription-banner{
+      display: none;
+    }
+    .suscription-form-container{
+      width: 100%;
+    }
+  }
 }
