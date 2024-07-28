@@ -52,6 +52,9 @@
             flex-direction: column;
             justify-content: center;
             font-size: var(--font-m);
+            p{
+                margin-bottom: var(--margin-m);
+            }
             .sizes-inputs{
                 display: flex;
                 justify-content: center;
@@ -91,6 +94,24 @@
                 margin: auto;
                 width: 50%;
                 font-size: var(--font-m);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .product-details{
+        flex-direction: column;
+        .product-details-left{
+            width: 100%;
+        }
+        .product-details-right{
+            width: 100%;
+            .product-details-info{
+                height: auto;
+            }
+            .product-buy-section{
+                height: auto;
             }
         }
     }

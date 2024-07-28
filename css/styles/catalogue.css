@@ -42,3 +42,11 @@
         padding: 2% 5%;
     }
 }
+
+@media (max-width: 768px){
+    .catalogue{
+        .catalogue-filter-bar{
+            width: 100%;
+        }
+    }
+}

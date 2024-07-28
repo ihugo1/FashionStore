@@ -1,0 +1,94 @@
+.shopping-cart{
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    padding: 2%;
+    background-color: var(--gray-lighter);
+    transition: right 0.2s ease;
+    .shopping-cart-title{
+        font-size: var(--font-xxl);
+        color: var(--white);
+        margin-bottom: var(--margin-xl);
+    }
+    .shopping-cart-header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--white);
+        color: var(--white);
+        padding: 2% 3%;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: var(--margin-xxs);
+        .shopping-cart-header-id{
+            width: 10%;
+        }
+        .shopping-cart-header-name{
+            width: 50%;
+        }
+        .shopping-cart-header-size{
+            width: 10%;
+        }
+        .shopping-cart-header-price{
+            width: 10%;
+        }
+        .shopping-cart-header-remove{
+            width: 10%;
+        }
+    }
+    .shopping-cart-items{
+        width: 100%;
+        margin-bottom: var(--margin-xl);
+        border-bottom: 1px solid var(--white);
+        .shopping-cart-item{
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            color: var(--white);
+            padding: 2% 3%; 
+            border: 1px solid rgba(0, 0, 0, 0);
+            margin-bottom: var(--margin-xxs);
+            .shopping-cart-item-id{
+                width: 10%;
+            }
+            .shopping-cart-item-name{
+                width: 50%;
+            }
+            .shopping-cart-item-size{
+                width: 10%;
+            }
+            .shopping-cart-item-price{
+                width: 10%;
+            }
+            .shopping-cart-item-remove-btn{
+                width: 10%;
+                font-size: var(--font-m);
+            }
+        }
+        .shopping-cart-item:hover{
+            border: 1px solid var(--pink);
+            background-color: var(--gray);
+        }
+    }
+    .shopping-cart-btns{
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        button{
+            font-size: var(--font-s);
+            padding: 2%;
+        }
+    }
+}
+
+.shopping-cart-active{
+    right: 0;
+}
