@@ -15,7 +15,7 @@
         </button>
       </div>
       <div class="header__left">
-        <a href="index.html" class="logo">
+        <a href="home.html" class="logo">
           <p>FASHION STORE</p>
         </a>
       </div>
@@ -24,12 +24,14 @@
           <a href="/html/catalogue.html" class="nav__link animated-link"
             >CATALOGUE</a
           >
-          <a href="#" class="nav__link animated-link">STORES</a>
-          <a href="#" class="nav__link animated-link">ABOUT US</a>
+          <a href="/html/stores.html" class="nav__link animated-link">STORES</a>
+          <a href="/html/about.html" class="nav__link animated-link"
+            >ABOUT US</a
+          >
         </nav>
       </div>
       <div class="header__right">
-        <button class="shopping-cart-open-btn">
+        <button class="shopping-cart-open-btn" id="shopping-cart-open-btn">
           <i class="fa-solid fa-cart-shopping"></i>
         </button>
       </div>
@@ -45,6 +47,7 @@
       <img src="/img/home/home-banner.jpg" class="home-banner__img" />
     </div>
 
+    <!--Suscription Section-->
     <section class="suscription">
       <div class="suscription-banner">
         <img
@@ -72,17 +75,43 @@
       </div>
     </section>
 
+    <!--Side-menu-->
     <div class="side-menu" id="side-menu">
       <nav class="side-menu-nav">
         <a href="/html/catalogue.html">CATALOGUE</a>
-        <a href="#">STORES</a>
-        <a href="#">ABOUT US</a>
+        <a href="/html/stores.html">STORES</a>
+        <a href="/html/about.html">ABOUT US</a>
         <button class="side-menu-close-btn" id="side-menu-close-btn">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </nav>
     </div>
 
-    <script type="module" src="/js/modules/home-module.js"></script>
+    <!--ShoppingCart-->
+    <div class="shopping-cart" id="shopping-cart">
+      <h2 class="shopping-cart-title">Your Cart:</h2>
+      <div class="shopping-cart-header">
+        <span class="shopping-cart-header-id">ID</span>
+        <span class="shopping-cart-header-name">Product's Name</span>
+        <span class="shopping-cart-header-size">Size</span>
+        <span class="shopping-cart-header-price">Price</span>
+        <span class="shopping-cart-header-remove">Remove</span>
+      </div>
+      <div class="shopping-cart-items" id="shopping-cart-items"></div>
+      <div class="shopping-cart-btns">
+        <button class="animated-btn-pink" id="shopping-cart-buy-btn">
+          Buy Now
+        </button>
+        <button class="animated-btn-pink" id="shopping-cart-clear-btn">
+          Clear Cart
+        </button>
+        <button class="animated-btn-pink" id="shopping-cart-close-btn">
+          Close Cart
+        </button>
+      </div>
+    </div>
+
+    <!--JS-->
+    <script type="module" src="/app.js"></script>
   </body>
 </html>

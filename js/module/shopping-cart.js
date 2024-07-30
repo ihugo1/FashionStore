@@ -1,25 +1,29 @@
 import { productsDatabase } from "../data-base/products-database.js";
 
 class ShoppingCart {
-  
   constructor(containerId) {
-    this.shoppingCartItems = [];
-    this.productCartIdGenerator = 0;
     this.$shoppingCartItemsContainer = document.getElementById(containerId);
+    this.shoppingCartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    this.productCartIdGenerator = JSON.parse(localStorage.getItem("cartIdGenerator")) || 0;
+  }
+
+  saveCart() {
+    localStorage.setItem("cart", JSON.stringify(this.shoppingCartItems));
+    localStorage.setItem("cartIdGenerator", JSON.stringify(this.productCartIdGenerator));
   }
 
   addToCart(productId, productSize) {
     this.productCartIdGenerator++;
-    const productInDataBase = productsDatabase.find(product => product.id === productId);
-    const productToAdd = { ...productInDataBase, selectedSize: productSize, cartId: this.productCartIdGenerator };
+    const productInDataBase = productsDatabase.find((product) => product.id === productId);
+    const productToAdd = {...productInDataBase, selectedSize: productSize, cartId: this.productCartIdGenerator,};
     this.shoppingCartItems.push(productToAdd);
+    this.saveCart();
     this.loadCart();
   }
 
   loadCart() {
     let temp = "";
-
-    this.shoppingCartItems.forEach(item => {
+    this.shoppingCartItems.forEach((item) => {
       temp += `
         <div class="shopping-cart-item">
           <span class="shopping-cart-item-id">${item.id}</span>
@@ -32,28 +36,18 @@ class ShoppingCart {
         </div>
       `;
     });
-
     this.$shoppingCartItemsContainer.innerHTML = temp;
-
     document.querySelectorAll(".shopping-cart-item-remove-btn").forEach(
-      removeBtn => removeBtn.addEventListener("click", () => 
-        this.removeFromCart(removeBtn.getAttribute("in-cart-id"))
-      )
-    );
+      (removeBtn) => removeBtn.addEventListener("click", () => 
+        this.removeFromCart(parseInt(removeBtn.getAttribute("in-cart-id")))
+    ));
   }
 
   removeFromCart(itemId) {
-    this.shoppingCartItems = this.shoppingCartItems.filter(item => item.cartId !== parseInt(itemId));
+    this.shoppingCartItems = this.shoppingCartItems.filter((item) => item.cartId !== itemId);
+    this.saveCart();
     this.loadCart();
   }
-
-  clearCart() {
-    this.shoppingCartItems = [];
-    this.loadCart();
-  }
-
 }
 
 export const cart = new ShoppingCart("shopping-cart-items");
-
-

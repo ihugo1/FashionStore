@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
+
     <!--Header-->
     <header class="header">
       <div class="header__left-mobile">
@@ -15,17 +16,17 @@
         </button>
       </div>
       <div class="header__left">
-        <a href="index.html" class="logo">
+        <a href="home.html" class="logo">
           <p>FASHION STORE</p>
         </a>
       </div>
       <div class="header__middle">
         <nav class="nav">
-          <a href="/html/catalogue.html" class="nav__link animated-link"
-            >CATALOGUE</a
+          <a href="/html/home.html" class="nav__link animated-link">HOME</a>
+          <a href="/html/stores.html" class="nav__link animated-link">STORES</a>
+          <a href="/html/about.html" class="nav__link animated-link"
+            >ABOUT US</a
           >
-          <a href="#" class="nav__link animated-link">STORES</a>
-          <a href="#" class="nav__link animated-link">ABOUT US</a>
         </nav>
       </div>
       <div class="header__right">
@@ -64,15 +65,38 @@
 
     <div class="side-menu" id="side-menu">
       <nav class="side-menu-nav">
-        <a href="/html/catalogue.html">CATALOGUE</a>
-        <a href="#">STORES</a>
-        <a href="#">ABOUT US</a>
+        <a href="/html/home.html">HOME</a>
+        <a href="/html/stores.html">STORES</a>
+        <a href="/html/about.html">ABOUT US</a>
         <button class="side-menu-close-btn" id="side-menu-close-btn">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </nav>
     </div>
 
-    <script type="module" src="/js/modules/catalogue-module.js"></script>
+    <!--ShoppingCart-->
+    <div class="shopping-cart" id="shopping-cart">
+      <h2 class="shopping-cart-title">Your Cart:</h2>
+      <div class="shopping-cart-header">
+        <span class="shopping-cart-header-id">ID</span>
+        <span class="shopping-cart-header-name">Product's Name</span>
+        <span class="shopping-cart-header-size">Size</span>
+        <span class="shopping-cart-header-price">Price</span>
+        <span class="shopping-cart-header-remove">Remove</span>
+      </div>
+      <div class="shopping-cart-items" id="shopping-cart-items">
+      </div>
+      <div class="shopping-cart-btns">
+        <button class="animated-btn-pink" id="shopping-cart-buy-btn">Buy Now</button>
+        <button class="animated-btn-pink" id="shopping-cart-clear-btn">Clear Cart</button>
+        <button class="animated-btn-pink" id="shopping-cart-close-btn">Close Cart</button>
+      </div>
+    </div>
+
+    <!--Js-->
+    <script type="module" src="/app.js"></script>
+    <script>
+      window.requiresCatalogueModule = true;
+    </script>
   </body>
 </html>
