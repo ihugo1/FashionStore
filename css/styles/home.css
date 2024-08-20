@@ -1,19 +1,24 @@
 .home-banner {
-  width: 100%;
-  height: 90vh;
-  margin-top: 10vh;
   position: relative;
-
-  .home-banner__img{
-    width: 100%;
-    height: 100%;
-    top: 0;
-    position: absolute;
-    object-fit: cover;
-    object-position: top;
-    z-index: -5;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  .home-banner__img-container{
+    .home-banner__img{
+      position: absolute;
+      top: 0;
+      z-index: -5;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: opacity 0.5s ease-in-out;
+    }
   }
-
+  .hidden{
+    opacity: 0;
+  }  
   .home-banner__content{
     width: 100%;
     height: 100%;
@@ -21,40 +26,62 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(22, 0, 11, 0.8);
-
+    background-color: rgba(24, 0, 12, 0.6);
     h2{
       font-size: var(--font-xxl);
       color: var(--white);
       margin-bottom: var(--margin-xxs);
       text-align: center;
+      font-family: "Oswald", sans-serif;
+      font-weight: 700;
     }
     h3{
-      font-size: var(--font-l);
+      font-size: var(--font-m);
       color: var(--white);
       font-weight: 100;
       margin-bottom: var(--margin-xxl);
       text-align: center;
     }
     a {
+      z-index: 5;
       margin-top: var(--margin-xxl);
       font-size: var(--font-m);
     }
   }
 }
 
+.best-sellers{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--secondary);
+  h3{
+     text-align: center;
+     color: var(--white);
+     font-size: var(--font-xl);
+     font-weight: 400;
+  }
+  .best-sellers-products{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
 .suscription{
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   display: flex;
-
   .suscription-banner{
-    width: 50%;
+    width: 60%;
     position: relative;
-
     .suscription-banner__img{
       width: 100%;
       height: 100%;
+      object-fit: cover;
+      object-position: center;
       position: absolute;
       z-index: -5;
     }
@@ -67,23 +94,27 @@
       justify-content: center;
       padding: 10%;
       text-align: center;
-      background-color: rgba(22, 0, 11, 0.747);
-
+      background-color: rgba(22, 0, 11, 0.8);
       h3{
         color: var(--white);
-        font-size: var(--font-l);
+        font-size: var(--font-xxl);
         font-weight: 400;
+        font-family: "Oswald", sans-serif;
+        font-weight: 700;
+        text-align: left;
       }
     }
   }
-
   .suscription-form-container{
-    width: 50%;
+    width: 40%;
     height: 100%;
-    background-color: var(--gray-lighter);
+    position: absolute;
+    right: 0;
+    background-color: var(--secondary-light);
     display: flex;
     justify-content: center;
     align-items: center;
+
 
     h3{
       text-align: center;
@@ -114,7 +145,7 @@
         
         label{
           width: 100%;
-          color: var(--pink);
+          color: var(--gray);
           font-size: var(--font-s);
           margin-bottom: var(--margin-xs);
         }
@@ -122,21 +153,25 @@
         input{
           width: 100%;
           padding: 2% 4%;
-          background-color: var(--white);
-          color: var(--gray);
+          background-color: var(--secondary-light);
+          color: var(--white);
           font-size: var(--font-s);
           border: none;
-          border-radius: 10px;
+          border-radius: 15px;
+          outline: none;
+          border: 2px solid var(--gray);
         }
 
         input:focus {
           outline: none;
+          border: 2px solid var(--primary);
         }
       }
       
       button{
+        width: 60%;
+        margin: auto;
         margin-top: var(--margin-xxl);
-        width: 100%;
         font-size: var(--font-m);
       }
     }
@@ -147,12 +182,31 @@
 /* Responsive */
 
 @media (max-width: 768px) {
+  .home-banner{
+    .home-banner__content{
+      padding: 0 3%;
+    }
+  }
+  .best-sellers{
+    padding: 10% 0;
+    height: auto;
+    .best-sellers-products{
+      flex-direction: column;
+    }
+  }
   .suscription{
+    flex-direction: column;
     .suscription-banner{
-      display: none;
+      width: 100%;
     }
     .suscription-form-container{
       width: 100%;
+      .suscription-form{
+        width: 100%;
+        .form-group{
+          width: 100%;
+        }
+      }
     }
   }
 }

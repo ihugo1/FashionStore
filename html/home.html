@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
+
     <!--Header-->
-    <header class="header">
+    <header class="header header-transparent">
       <div class="header__left-mobile">
         <button class="side-menu-open-btn" id="side-menu-open-btn">
           <i class="fa-solid fa-bars"></i>
@@ -37,15 +38,70 @@
       </div>
     </header>
 
+    <!--Side-menu-->
+    <div class="side-menu" id="side-menu">
+      <h3 class="side-menu-title">Menu</h3>
+      <nav class="side-menu-nav">
+        <a href="/html/home.html">
+          <i class="fa-solid fa-home"></i><span>Home</span>
+        </a>
+        <a href="/html/catalogue.html">
+          <i class="fa-solid fa-shirt"></i><span>Catalogue</span>
+        </a>
+        <a href="/html/stores.html">
+          <i class="fa-solid fa-location-dot"></i><span>Stores</span>
+        </a>
+        <a href="/html/about.html">
+          <i class="fa-solid fa-circle-info"></i><span>About Us</span>
+        </a>
+      </nav>
+      <button class="side-menu-close-btn" id="side-menu-close-btn">
+        <span>Close</span>
+      </button>
+    </div>
+
+    <!--ShoppingCart-->
+    <div class="shopping-cart" id="shopping-cart">
+      <h2 class="shopping-cart-title">Your Cart:</h2>
+      <div class="shopping-cart-header">
+        <span class="shopping-cart-header-id">ID</span>
+        <span class="shopping-cart-header-name">Product's Name</span>
+        <span class="shopping-cart-header-size">Size</span>
+        <span class="shopping-cart-header-price">Price</span>
+        <span class="shopping-cart-header-remove">Remove</span>
+      </div>
+      <div class="shopping-cart-items" id="shopping-cart-items"></div>
+      <div class="shopping-cart-btns">
+        <button class="animated-btn" id="shopping-cart-buy-btn">
+          Buy Now
+        </button>
+        <button class="animated-btn" id="shopping-cart-clear-btn">
+          Clear Cart
+        </button>
+        <button class="animated-btn" id="shopping-cart-close-btn">
+          Close Cart
+        </button>
+      </div>
+    </div>    
+
     <!--Banner-->
-    <div class="home-banner">
+    <div class="home-banner" id="home-banner">
       <div class="home-banner__content">
         <h2>UPGRADE YOUR WARDOBE WITH THE LATEST TRENDS!</h2>
         <h3>Shop online or visit our stores for exclusive fashion deals</h3>
-        <a class="animated-btn">Go to catalogue</a>
+        <a class="animated-btn" href="/html/catalogue.html">Go to catalogue</a>
       </div>
-      <img src="/img/home/home-banner.jpg" class="home-banner__img" />
+      <div class="home-banner__img-container">
+        <img src="" class="home-banner__img" id="home-banner__img"/>
+      </div>
     </div>
+
+    <!--Best Selled Section-->
+    <section class="best-sellers">
+      <h3>- BEST SELLERS -</h3>
+      <div class="best-sellers-products" id="best-sellers-products">
+      </div>
+    </section>
 
     <!--Suscription Section-->
     <section class="suscription">
@@ -61,7 +117,7 @@
       </div>
       <div class="suscription-form-container">
         <form action="#" method="post" class="suscription-form">
-          <h2>Suscribe to Fashion Store</h2>
+          <h2>Subscribing only takes a few seconds!</h2>
           <div class="form-group">
             <label for="name">Name: </label>
             <input type="text" id="name" name="name" required />
@@ -75,43 +131,25 @@
       </div>
     </section>
 
-    <!--Side-menu-->
-    <div class="side-menu" id="side-menu">
-      <nav class="side-menu-nav">
-        <a href="/html/catalogue.html">CATALOGUE</a>
-        <a href="/html/stores.html">STORES</a>
-        <a href="/html/about.html">ABOUT US</a>
-        <button class="side-menu-close-btn" id="side-menu-close-btn">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </nav>
-    </div>
-
-    <!--ShoppingCart-->
-    <div class="shopping-cart" id="shopping-cart">
-      <h2 class="shopping-cart-title">Your Cart:</h2>
-      <div class="shopping-cart-header">
-        <span class="shopping-cart-header-id">ID</span>
-        <span class="shopping-cart-header-name">Product's Name</span>
-        <span class="shopping-cart-header-size">Size</span>
-        <span class="shopping-cart-header-price">Price</span>
-        <span class="shopping-cart-header-remove">Remove</span>
+    <!--Footer-->
+    <div class="footer">
+      <div class="footer-left">
+        <span>Phone number 1</span>
+        <span>Phone number 2</span>
+        <span>Phone number 3</span>
       </div>
-      <div class="shopping-cart-items" id="shopping-cart-items"></div>
-      <div class="shopping-cart-btns">
-        <button class="animated-btn-pink" id="shopping-cart-buy-btn">
-          Buy Now
-        </button>
-        <button class="animated-btn-pink" id="shopping-cart-clear-btn">
-          Clear Cart
-        </button>
-        <button class="animated-btn-pink" id="shopping-cart-close-btn">
-          Close Cart
-        </button>
+      <div class="footer-middle">
+        <p class="footer-logo">FASHION STORE</p>
+      </div>
+      <div class="footer-right">
+        <span>Adress 1</span>
+        <span>Adress 2</span>
+        <span>Adress 3</span>
       </div>
     </div>
 
     <!--JS-->
     <script type="module" src="/app.js"></script>
+
   </body>
 </html>

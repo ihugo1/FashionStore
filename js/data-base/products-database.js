@@ -10,6 +10,7 @@ export const productsDatabase = [
     image: "/img/products/blouse/black-navy-collar-ribbon-buttoned-blouse.webp",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, praesentium iure, veniam temporibus sequi fugiat obcaecati blanditiis molestias laudantium sit quisquam asperiores earum animi maxime mollitia ducimus, nobis ipsam iste!",
+    topSeller: true,
   },
   {
     id: 2,
@@ -34,6 +35,7 @@ export const productsDatabase = [
     image: "/img/products/dress/belted-tube-dress.webp",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, praesentium iure, veniam temporibus sequi fugiat obcaecati blanditiis molestias laudantium sit quisquam asperiores earum animi maxime mollitia ducimus, nobis ipsam iste!",
+    topSeller: true,
   },
   {
     id: 4,
@@ -82,6 +84,7 @@ export const productsDatabase = [
     image: "/img/products/pants/cargo-pants.webp",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, praesentium iure, veniam temporibus sequi fugiat obcaecati blanditiis molestias laudantium sit quisquam asperiores earum animi maxime mollitia ducimus, nobis ipsam iste!",
+    topSeller: true,
   },
   {
     id: 8,
@@ -106,6 +109,7 @@ export const productsDatabase = [
     image: "/img/products/skirt/pink-knitted-mini-skirt.webp",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, praesentium iure, veniam temporibus sequi fugiat obcaecati blanditiis molestias laudantium sit quisquam asperiores earum animi maxime mollitia ducimus, nobis ipsam iste!",
+
   },
 
   {

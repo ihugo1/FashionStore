@@ -23,7 +23,7 @@ export function loadProductDetails() {
         <p>Sizes:</p>
         <div class="sizes-inputs" id="sizes-input-container">
         </div>
-        <button class="buy-btn animated-btn-pink" id="add-cart-btn">Buy Now!</button>
+        <button class="buy-btn animated-btn" id="add-cart-btn">Buy Now!</button>
       </div>
     </div>
   `;

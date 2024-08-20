@@ -4,21 +4,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--gray-lighter);
-
+    background-color: var(--secondary);
     .catalogue-filter-bar{
         height: 15vh;
         width: 50%;
         display: flex;
         justify-content: space-around;
         align-items: center;
-
         .dropdown-menu-select{
             width: 40%;
             height: 30px;
             border-radius: 10px;
             text-align: center;
             font-size: var(--font-s);
+            border: none;
+            .select-selected {
+                background-color: DodgerBlue;
+            }
         }
         .dropdown-menu-select:focus{
             outline: none;
@@ -39,7 +41,7 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        padding: 2% 5%;
+        padding: 2% 1%;
     }
 }
 

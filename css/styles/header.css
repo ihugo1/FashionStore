@@ -1,78 +1,90 @@
 .header {
-  width: 100%;
-  height: 10vh;
-  padding: 0 5%;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 5;
+  width: 100%;
+  height: 10vh;
+  padding: 0 3%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: var(--gray);
-  .header__left-mobile {
+  background-color: var(--secondary-dark);
+  .header__left-mobile{
     width: 25%;
     display: none;
-    .side-menu-open-btn {
-      height: auto;
-      width: auto;
-      i {
-        font-size: var(--font-l);
-        color: var(--white);
-      }
+    height: auto;
+    width: auto;
+    i{
+      font-size: var(--font-xxl);
+      color: var(--white);
     }
   }
-  .header__left {
+  .header__left{
     width: 25%;
-    .logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .logo p{
       font-size: var(--font-l);
       color: var(--white);
     }
   }
-  .header__middle {
+  .header__middle{
     width: 50%;
-    .nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .nav{
+      width: 100%;
       display: flex;
-      justify-content: space-around;
-      a {
+      justify-content: center;
+      gap: 0 5%;
+      a{
         font-size: var(--font-s);
         font-weight: 500;
       }
     }
   }
-  .header__right {
+  .header__right{
     width: 25%;
-    .shopping-cart-open-btn {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .shopping-cart-open-btn{
       height: auto;
       width: auto;
-      float: right;
-      i {
-        font-size: var(--font-l);
+      i{
+        font-size: var(--font-xxl);
         color: var(--white);
+      }
+      i:hover{
+        color: var(--primary);
       }
     }
   }
 }
 
+.header-transparent{
+  background-color: rgba(0, 0, 0, 0);
+}
 /* Responsive */
 
 @media (max-width: 768px) {
-  .header {
-    padding: 0 5%;
-    .header__left {
-      width: 50%;
-      .logo {
-        text-align: center;
-        font-size: var(--font-m);
-        color: var(--white);
-      }
+  .header{
+
+    .header__right{
+      width: 25%;
     }
-    .header__left-mobile {
+    .header__left{
+      width: 50%;
+    }
+    .header__left-mobile{
+      width: 25%;
       display: block;
     }
-    .header__middle {
+    .header__middle{
       display: none;
-    }
-    .header__right {
-      width: 25%;
     }
   }
 }

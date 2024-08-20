@@ -1,9 +1,15 @@
 :root {
-    --gray: rgb(31, 31, 31);
-    --gray-lighter: rgb(41, 41, 41);
-    --pink: rgb(170, 0, 113);
-    --white: rgb(221, 221, 221);
-    --pink-lighter: rgb(218, 1, 145);
+    --primary: #e6029d;
+    --primary-light: #ff3fc5;
+    --primary-dark: #9b327b;
+
+    --secondary-light: #55394D;
+    --secondary: #2e272b;
+    --secondary-dark: #1d181b;
+
+    --black: #201c1f;
+    --gray: #ad97a8;
+    --white: #f3e4f0;
 
     --margin-xxs: 0.25rem;
     --margin-xs: 0.50rem;
@@ -23,34 +29,34 @@
 }
 
 .animated-link{
-    color: var(--pink);
+    color: var(--white);
     will-change: transform;
     transition: transform 0.2s ease;
 }
 .animated-link:hover{
-    color: var(--pink-lighter);
+    color: var(--primary);
     transform: scale(1.1);
     cursor: pointer;
 }
 
 .animated-btn{
-    padding: 1%;
-    color: var(--pink);
-    border: 1px solid var(--pink);
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: transform 0.2s ease;
-    will-change: transform;
+   background-color: var(--primary);
+   color: var(--white);
+   border-radius: 15px;
+   border: 2px solid var(--primary);
+   padding: 1%;
+   transition: all 0.2s ease;
 }
 .animated-btn:hover{
-    color: var(--pink-lighter);
-    transform: scale(1.04);
+    color: var(--primary);
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid var(--primary);
     cursor: pointer;
-    border: 1px solid var(--pink-lighter);
 }
+
 .animated-btn-pink{
     padding: 1%;
-    color: var(--gray);
+    color: var(--primary);
     border: 1px solid var(--pink);
     border-radius: 10px;
     background-color: var(--pink);

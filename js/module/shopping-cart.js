@@ -48,6 +48,16 @@ class ShoppingCart {
     this.saveCart();
     this.loadCart();
   }
+
+  clearCart(){
+    this.shoppingCartItems = [];
+    this.saveCart();
+    this.loadCart();
+  }
 }
+
+document.getElementById("shopping-cart-clear-btn").addEventListener("click", () => {
+  cart.clearCart();
+});
 
 export const cart = new ShoppingCart("shopping-cart-items");

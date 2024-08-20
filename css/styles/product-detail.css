@@ -3,14 +3,15 @@
     display: flex;
     width: 100%;
     height: 90vh;
+    background-color: var(--secondary);
     .product-details-left{
         width:  50%;
         display: flex;
         justify-content: center;
         align-items: center;
         .product-details-img{
-            width: 80%;
-            height: auto;
+            width: auto;
+            height: 80%;
         }
     }
     .product-details-right{
@@ -27,22 +28,26 @@
             .product-details-name{
                 font-size: var(--font-xl);
                 margin-bottom: var(--margin-xs);
+                color: var(--white);
             }
             .product-details-price{
                 font-size: var(--font-m);
                 margin-bottom: var(--margin-xs);
+                color: green;
             }
             .product-details-category{
-                font-size: var(--font-m);
+                font-size: var(--font-s);
                 margin-bottom: var(--margin-xl);
                 font-weight: lighter;
                 text-transform: capitalize;
+                color: var(--white);
             }
             .product-details-description{
                 font-size: var(--font-s);
                 font-weight: normal;
                 text-align: justify;
                 margin-bottom: var(--font-xxl);
+                color: var(--white);
             }
         }
         .product-buy-section{
@@ -52,6 +57,7 @@
             flex-direction: column;
             justify-content: center;
             font-size: var(--font-m);
+            color: var(--white);
             p{
                 margin-bottom: var(--margin-m);
             }
@@ -74,6 +80,7 @@
                         transition: background-color 0.5s ease;
                         z-index: 1;
                         cursor: pointer;
+                        color: var(--secondary);
                     }
                     input{
                         position: absolute;
@@ -85,7 +92,7 @@
                         cursor: pointer;
                     }
                     input:checked+label{
-                        background-color: var(--pink-lighter);
+                        background-color: var(--primary);
                         color: var(--white);
                     }
                 }
@@ -101,9 +108,15 @@
 
 @media (max-width: 768px){
     .product-details{
+        width: 100%;
+        height: auto;
         flex-direction: column;
+        padding: 10% 0;
         .product-details-left{
             width: 100%;
+            .product-details-img{
+                width: 80%;
+            }
         }
         .product-details-right{
             width: 100%;

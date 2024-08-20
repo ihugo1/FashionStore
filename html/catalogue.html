@@ -12,7 +12,7 @@
     <header class="header">
       <div class="header__left-mobile">
         <button class="side-menu-open-btn" id="side-menu-open-btn">
-          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars side-menu-open-btn-icon"></i>
         </button>
       </div>
       <div class="header__left">
@@ -31,11 +31,54 @@
       </div>
       <div class="header__right">
         <button class="shopping-cart-open-btn" id="shopping-cart-open-btn">
-          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-cart-shopping shopping-cart-open-btn-icon"></i>
         </button>
       </div>
     </header>
 
+    <!--Side-menu-->
+    <div class="side-menu" id="side-menu">
+      <h3 class="side-menu-title">Menu</h3>
+      <nav class="side-menu-nav">
+        <a href="/html/home.html">
+          <i class="fa-solid fa-home"></i><span>Home</span>
+        </a>
+        <a href="/html/catalogue.html">
+          <i class="fa-solid fa-shirt"></i><span>Catalogue</span>
+        </a>
+        <a href="/html/stores.html">
+          <i class="fa-solid fa-location-dot"></i><span>Stores</span>
+        </a>
+        <a href="/html/about.html">
+          <i class="fa-solid fa-circle-info"></i><span>About Us</span>
+        </a>
+      </nav>
+      <button class="side-menu-close-btn" id="side-menu-close-btn">
+        <span>Close</span>
+      </button>
+    </div>
+
+
+    <!--ShoppingCart-->
+    <div class="shopping-cart" id="shopping-cart">
+      <h2 class="shopping-cart-title">Your Cart:</h2>
+      <div class="shopping-cart-header">
+        <span class="shopping-cart-header-id">ID</span>
+        <span class="shopping-cart-header-name">Product's Name</span>
+        <span class="shopping-cart-header-size">Size</span>
+        <span class="shopping-cart-header-price">Price</span>
+        <span class="shopping-cart-header-remove">Remove</span>
+      </div>
+      <div class="shopping-cart-items" id="shopping-cart-items">
+      </div>
+      <div class="shopping-cart-btns">
+        <button class="animated-btn" id="shopping-cart-buy-btn">Buy Now</button>
+        <button class="animated-btn" id="shopping-cart-clear-btn">Clear Cart</button>
+        <button class="animated-btn" id="shopping-cart-close-btn">Close Cart</button>
+      </div>
+    </div>
+
+    <!--Catalogue-->
     <section class="catalogue" id="catalogue">
       <div class="catalogue-filter-bar">
         <label for="dropdown-menu" class="dropdown-menu-label"
@@ -54,7 +97,7 @@
           <option value="skirt">Skirts</option>
         </select>
         <button
-          class="dropdown-menu-filter-btn animated-btn-pink"
+          class="dropdown-menu-filter-btn animated-btn"
           id="dropdown-menu-filter-btn"
         >
           Filter
@@ -63,40 +106,25 @@
       <div class="products-container" id="products-container"></div>
     </section>
 
-    <div class="side-menu" id="side-menu">
-      <nav class="side-menu-nav">
-        <a href="/html/home.html">HOME</a>
-        <a href="/html/stores.html">STORES</a>
-        <a href="/html/about.html">ABOUT US</a>
-        <button class="side-menu-close-btn" id="side-menu-close-btn">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </nav>
-    </div>
-
-    <!--ShoppingCart-->
-    <div class="shopping-cart" id="shopping-cart">
-      <h2 class="shopping-cart-title">Your Cart:</h2>
-      <div class="shopping-cart-header">
-        <span class="shopping-cart-header-id">ID</span>
-        <span class="shopping-cart-header-name">Product's Name</span>
-        <span class="shopping-cart-header-size">Size</span>
-        <span class="shopping-cart-header-price">Price</span>
-        <span class="shopping-cart-header-remove">Remove</span>
+    <!--Footer-->
+    <div class="footer">
+      <div class="footer-left">
+        <span>Phone number 1</span>
+        <span>Phone number 2</span>
+        <span>Phone number 3</span>
       </div>
-      <div class="shopping-cart-items" id="shopping-cart-items">
+      <div class="footer-middle">
+        <p class="footer-logo">FASHION STORE</p>
       </div>
-      <div class="shopping-cart-btns">
-        <button class="animated-btn-pink" id="shopping-cart-buy-btn">Buy Now</button>
-        <button class="animated-btn-pink" id="shopping-cart-clear-btn">Clear Cart</button>
-        <button class="animated-btn-pink" id="shopping-cart-close-btn">Close Cart</button>
+      <div class="footer-right">
+        <span>Adress 1</span>
+        <span>Adress 2</span>
+        <span>Adress 3</span>
       </div>
     </div>
 
     <!--Js-->
     <script type="module" src="/app.js"></script>
-    <script>
-      window.requiresCatalogueModule = true;
-    </script>
+
   </body>
 </html>

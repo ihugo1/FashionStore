@@ -1,4 +1,6 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Hind:wght@300;400;500;600;700&family=Kalam:wght@300;400;700&family=Oswald:wght@200..700&display=swap');
+
 
 @import url(normalize.css);
 @import url(colors.css);
@@ -6,8 +8,10 @@
 @import url(styles/header.css);
 @import url(styles/side-menu.css);
 @import url(styles/shopping-cart.css);
+@import url(styles/footer.css);
 
 @import url(styles/home.css);
 @import url(styles/catalogue.css);
 @import url(styles/product-card.css);
 @import url(styles/product-detail.css);
+@import url(styles/stores.css);
